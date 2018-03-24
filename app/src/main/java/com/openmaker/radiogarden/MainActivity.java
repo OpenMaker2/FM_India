@@ -1,15 +1,32 @@
 package com.openmaker.radiogarden;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.media.session.MediaSession;
+import android.media.session.MediaSessionManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.CompoundButton;
+import android.widget.MediaController;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
     WebView myWebView;
+    public static final String ACTION_PLAY = "action_play";
+    public static final String ACTION_PAUSE = "action_pause";
+    public static final String ACTION_REWIND = "action_rewind";
+    public static final String ACTION_FAST_FORWARD = "action_fast_foward";
+    public static final String ACTION_NEXT = "action_next";
+    public static final String ACTION_PREVIOUS = "action_previous";
+    public static final String ACTION_STOP = "action_stop";
+
+    private MediaPlayer mMediaPlayer;
+    private MediaSessionManager mManager;
+    private MediaSession mSession;
+    private MediaController mController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
 
-        myWebView = (WebView) findViewById(R.id.radiogarden);
+          myWebView = (WebView) findViewById(R.id.radiogarden);
         myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.getSettings().setDomStorageEnabled(true);
         myWebView.getSettings().setDatabaseEnabled(true);
@@ -34,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     // The toggle is enabled
-                    myWebView.loadUrl("http://50.7.71.27:9699/;stream.mp3");
+                    //myWebView.loadUrl("http://50.7.71.27:9699/;stream.mp3");
+
                 } else {
                     // The toggle is disabled
 

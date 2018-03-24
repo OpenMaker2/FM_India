@@ -21,7 +21,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 /* Create an Intent that will start the Menu-Activity. */
                 //Intent mainIntent = new Intent(getApplicationContext(), MainActivity.class);
                 //Splash.this.startActivity(mainIntent);
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), radioStationsMain.class));
                 WelcomeActivity.this.finish();
             }
         }, SPLASH_DISPLAY_LENGTH);

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.openmaker.radiogarden">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
 
     <application
         android:allowBackup="true"
@@ -10,8 +13,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,15 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
 
-        </activity>
         <receiver android:name=".RemoteControlReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
         </receiver>
-    </application>
 
+        <activity
+            android:name=".radioStationsMain"
+            android:label="@string/title_activity_radio_stations_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
 
 </manifest>
