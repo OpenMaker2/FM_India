@@ -306,7 +306,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="5dp"
-                        android:text="Hindi"
+                        android:text="Tamil"
                         android:textColor="@color/colorAccent"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -418,7 +418,8 @@
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/Hindi"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
 
                     <TextView
                         android:id="@+id/textView9"
@@ -426,7 +427,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="5dp"
-                        android:text="Tamil"
+                        android:text="Hindi"
                         android:textColor="@color/colorAccent"
                         android:textSize="14sp"
                         android:textStyle="bold"

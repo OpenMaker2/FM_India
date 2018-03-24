@@ -2,7 +2,7 @@
     <string name="app_name">Radio Garden</string>
     <string name="title_stationlist_list">stationLists</string>
     <string name="title_stationlist_detail">stationList Detail</string>
-    <string name="title_activity_radio_stations_main">radioStationsMain</string>
+    <string name="title_activity_radio_stations_main">Radio Garden</string>
 
 
     <string name="liveplaycontrol">playcontrol</string>
